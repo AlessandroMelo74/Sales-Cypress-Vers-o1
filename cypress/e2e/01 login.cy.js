@@ -3,7 +3,6 @@ describe('Efetua Login logof', () => {
       cy.login()
   
       cy.get('.mat-menu-trigger').should('be.visible')
-       
-      
+    
     })
   })
