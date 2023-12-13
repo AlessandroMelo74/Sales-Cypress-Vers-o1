@@ -1,0 +1,33 @@
+{
+  "name": "SALES",
+  "version": "1.0.0",
+  "description": "Repositório da versão 1 SALES",
+  "main": "https://lead-hunter-sales-frontend-dev.azurewebsites.net",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:open:mobile": "cypress open --config viewportWidth=410 viewportHeight=860",
+    "test": "cypress run",
+    "teste:mobile": "cypress run --config viewportWidth=410 viewportHeight=860"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlessandroMelo74/Sales-Cypress"
+  },
+  "keywords": [
+    "SALES",
+    "Cypress.io",
+    "Woowtech"
+  ],
+  "author": "Alessandro Melo <alessandro@woowteh.com.br> ",
+  "license": "MIT",
+  "homepage": "",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^13.6.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-plugin-api": "^2.6.1"
+  },
+  "dependencies": {
+    "cypress-plugin-xhr-toggle": "^1.0.0"
+  }
+}
