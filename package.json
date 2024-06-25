@@ -4,7 +4,7 @@
   "description": "Repositório da versão 1 SALES",
   "main": "https://lead-hunter-sales-frontend-dev.azurewebsites.net",
   "scripts": {
-    "cy:open": "cypress open",
+    "cy:open": "cypress open ",
     "cy:open:mobile": "cypress open --config viewportWidth=410 viewportHeight=860",
     "test": "cypress run",
     "teste:mobile": "cypress run --config viewportWidth=410 viewportHeight=860"

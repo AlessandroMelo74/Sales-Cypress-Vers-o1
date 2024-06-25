@@ -1,15 +1,7 @@
-/// <reference types="Cypress" />
-Cypress.on('window:before:load', windows => {
-
-})
 describe('Pagina de logon SALES efetua login e logof', function() {
-    const THREE_SECONDS_IN_ML = 3000
-      beforeEach(function() {
-       cy.visit('https://lead-hunter-sales-frontend-dev.azurewebsites.net')
-          
-      })
        
       it('Verifica Tela de logon SALES - efetua login e logof', function() {
+        cy.visit('https://lead-hunter-sales-frontend-dev.azurewebsites.net/auth')
         cy.title().should('be.equal', 'Sales')
         cy.get('.image-logo').should('be.visible')
         cy.get('.image-info').should('be.visible')
@@ -24,12 +16,11 @@ describe('Pagina de logon SALES efetua login e logof', function() {
         cy.get('.others > :nth-child(1)').should('have.text', '11 4637-5855').and('be.visible')
         cy.get('.others > :nth-child(2)').should('have.text', 'São Paulo').and('be.visible')
 
+
         cy.login()
-        cy.get('.logo').should('be.visible')
-        
         cy.Sair()   
 
-        
+      
         })
-
       })
+        

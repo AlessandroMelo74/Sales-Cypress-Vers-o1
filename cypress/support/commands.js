@@ -3,10 +3,11 @@ Cypress.Commands.add('login', (
   password = Cypress.env('user_password'),
 ) => {
   const login = () => {
-    cy.visit('https://lead-hunter-sales-frontend-dev.azurewebsites.net')
+    cy.visit('https://lead-hunter-sales-frontend-dev.azurewebsites.net/auth')
 
     cy.get('#mat-input-0').type(user)
     cy.get('#mat-input-1').type(password, { log: false })
+    cy.get('[style="width: 304px; height: 78px;"] > div > iframe').click()
     cy.get('.mat-raised-button').click()
   }
   login()
@@ -15,8 +16,8 @@ Cypress.Commands.add('login', (
 
 Cypress.Commands.add('Sair', (
   ) => {
-  cy.get('.mat-menu-trigger').click()
-  cy.get('.mat-list-item-content > .mat-focus-indicator').click()
+    cy.get('.toolbar__user-icon').click()
+    cy.get('.toolbar__settings-item > span').click()
   })
 
   Cypress.Commands.add('Nomeprojeto01', project => {
