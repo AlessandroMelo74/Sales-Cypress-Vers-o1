@@ -3,8 +3,8 @@ Cypress.Commands.add('login', (
   password = Cypress.env('user_password'),
 ) => {
   const login = () => {
+    cy.viewport(1920, 1080);
     cy.visit('https://lead-hunter-sales-frontend-dev.azurewebsites.net/auth')
-
     cy.get('#mat-input-0').type(user)
     cy.get('#mat-input-1').type(password, { log: false })
     cy.get('[style="width: 304px; height: 78px;"] > div > iframe').click()
