@@ -26,11 +26,11 @@ Cypress.Commands.add('Sair', (
   })
 
   Cypress.Commands.add('Nomeprojeto02', project => {      
-    cy.get('.mat-form-field-infix').should('be.visible').type(project.description)
-    cy.get('form.ng-valid > .mat-focus-indicator > .mat-button-wrapper').click()  
+    cy.get('#mat-input-3').should('be.visible').type(project.description)
+  cy.get('.new-query__footer > .mat-focus-indicator').click()  
 })
 
 Cypress.Commands.add('Nomeprojeto03', project => {      
-  cy.get('#mat-input-6').should('be.visible').type(project.description)
-  cy.get('#mat-dialog-0 > lead-ui-custom-project > div > mat-dialog-actions > button > span.mat-button-wrapper').click()  
+  cy.get('#mat-input-7').should('be.visible').type(project.description)
+  cy.get('.new-query__footer > .mat-focus-indicator').click()  
 })
