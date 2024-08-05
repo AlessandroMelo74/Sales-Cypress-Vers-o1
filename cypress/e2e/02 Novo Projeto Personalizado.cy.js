@@ -7,7 +7,7 @@ import { faker } from '@faker-js/faker'
             name: `project-${faker.datatype.uuid()}`,
             description: `project-${faker.random.words(2)}`
           }
-          cy.get('.mat-button-wrapper > span').click()
+          cy.get('.new').click()
           cy.get('#mat-radio-2 > .mat-radio-label').click()
           cy.get('.header > p').should('have.text', 'Filtre a sua base:').and('be.visible')
           cy.get('#mat-select-value-5 > .mat-select-placeholder').click()
@@ -27,7 +27,7 @@ import { faker } from '@faker-js/faker'
         cy.get('#mat-input-4').type('99900000')
         cy.get('#mat-input-5').type("1")
         cy.get('#mat-input-6').type("30")
-       // cy.Nomeprojeto03(project)
+        //cy.Nomeprojeto03(project)
         
        
 

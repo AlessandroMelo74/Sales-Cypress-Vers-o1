@@ -2,7 +2,7 @@ describe('Pagina de logon SALES efetua login e logof', function() {
        
       it('Verifica Tela de logon SALES - efetua login e logof', function() {
         cy.viewport(1920, 1080);
-        cy.visit('https://lead-hunter-sales-frontend-dev.azurewebsites.net/auth')
+        cy.visit('/');         
           cy.title().should('be.equal', 'Sales')
           cy.get('.image-logo').should('be.visible')
           cy.get('.image-info').should('be.visible')

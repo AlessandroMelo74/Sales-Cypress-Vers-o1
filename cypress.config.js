@@ -1,12 +1,9 @@
-const { defineConfig } = require('cypress')
-
+const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://lead-hunter-sales-frontend-dev.azurewebsites.net',
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
   },
-  fixturesFolder: false,
-  video: false,
-  
-})
-
+});
