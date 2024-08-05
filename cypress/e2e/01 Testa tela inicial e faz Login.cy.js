@@ -2,7 +2,7 @@ describe('Pagina de logon SALES efetua login e logof', function() {
        
       it('Verifica Tela de logon SALES - efetua login e logof', function() {
         cy.viewport(1920, 1080);
-        cy.visit('/');         
+        cy.visit('/');        
           cy.title().should('be.equal', 'Sales')
           cy.get('.image-logo').should('be.visible')
           cy.get('.image-info').should('be.visible')
@@ -29,7 +29,7 @@ describe('Pagina de logon SALES efetua login e logof', function() {
           cy.get('.toolbar__right > .mat-icon-button').should('be.visible')
           cy.get('.toolbar__right > .mat-icon-button').should('be.visible')
 
-        //cy.Sair()   
+        cy.Sair()   
 
       
         })

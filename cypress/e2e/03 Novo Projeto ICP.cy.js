@@ -11,12 +11,11 @@ import { faker } from '@faker-js/faker'
         cy.get('img').should('be.visible')
         cy.get('.new').click()
         cy.get('#mat-radio-3 > .mat-radio-label > .mat-radio-label-content').click()
-        cy.get('lead-ui-upload > :nth-child(1) > .upload').selectFile('cypress/100_reg.csv', { action: 'drag-drop' })
-       
-       
+        cy.get('lead-ui-upload > :nth-child(1) > .upload').selectFile('cypress/100_reg.csv', { action: 'drag-drop' })         
         cy.get('.name > h5').should('have.text', 'Nomear Projeto').and('be.visible')
         cy.Nomeprojeto02(project)      
-        cy.get(':nth-child(2) > .status > div > .mat-focus-indicator > .mat-button-wrapper').should('have.text', ' Processamento ').and('be.visible')
+        cy.get(':nth-child(2) > .status > div > .mat-focus-indicator').should('have.text', ' Processamento ').and('be.visible')
+        
         })
 
   
