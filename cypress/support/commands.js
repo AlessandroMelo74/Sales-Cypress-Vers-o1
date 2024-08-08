@@ -22,15 +22,22 @@ Cypress.Commands.add('Sair', (
 
   Cypress.Commands.add('Nomeprojeto01', project => {
         cy.get('#mat-input-3').should('be.visible').type(project.description)
-        cy.get('form.ng-valid > .mat-focus-indicator').click()              
+        cy.get('form.ng-valid > .mat-focus-indicator').click()     
+        cy.get(':nth-child(2) > .status > div > .mat-focus-indicator').should('have.text', ' Processamento ').and('be.visible')         
   })
 
   Cypress.Commands.add('Nomeprojeto02', project => {      
-    cy.get('#mat-input-3').should('be.visible').type(project.description)
-  cy.get('.new-query__footer > .mat-focus-indicator').click()  
-})
+      cy.get('#mat-input-7').should('be.visible').type(project.description)
+      cy.get('.new-query__footer > .mat-focus-indicator').click()  
+      cy.get(':nth-child(2) > .status > div > .mat-focus-indicator').should('have.text', ' Processamento ').and('be.visible')
+    })
+  
 
-Cypress.Commands.add('Nomeprojeto03', project => {      
-  cy.get('#mat-input-7').should('be.visible').type(project.description)
-  cy.get('.new-query__footer > .mat-focus-indicator').click()  
-})
+  Cypress.Commands.add('Nomeprojeto03', project => {      
+    cy.get('#mat-input-3').should('be.visible').type(project.description)
+    cy.get('.new-query__footer > .mat-focus-indicator').click()  
+    cy.get(':nth-child(2) > .status > div > .mat-focus-indicator').should('have.text', ' Processamento ').and('be.visible')
+
+  })
+
+

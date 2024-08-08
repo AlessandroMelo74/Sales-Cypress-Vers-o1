@@ -18,7 +18,7 @@ describe('Criar Projeto Personalizado', function() {
         cy.get(':nth-child(2) > .actions > div > .mat-focus-indicator').click()
         cy.get('.full-button').click()
         
-//        cy.Sair()
+        cy.Sair()
         
 
     })
