@@ -8,14 +8,13 @@ import { faker } from '@faker-js/faker'
             description: `project-${faker.random.words(2)}`
           }
 
-          cy.get('.new').click()
+          cy.get('.new').should('be.visible').click()
           cy.get('#mat-radio-2 > .mat-radio-label').click()
           cy.get('.header > p').should('have.text', 'Filtre a sua base:').and('be.visible')
           cy.get('#mat-select-value-5 > .mat-select-placeholder').click()
           cy.get('#mat-option-31 > span').click();
           cy.get('#mat-option-33 > span').click();
-          cy.get('#mat-option-1389 > span').click();
-          //cy.get('#mat-option-2772 > span').click();
+          cy.get('#mat-option-1389 > span').click();          
           cy.get('#mat-option-33 > span').click().type('{esc}');
           cy.get('#mat-select-value-1 > .mat-select-placeholder').click()
           cy.get('#mat-option-1 > span').click()
@@ -29,30 +28,7 @@ import { faker } from '@faker-js/faker'
           cy.get('#mat-input-4').type('500000')
           cy.get('#mat-input-5').type("1")
           cy.get('#mat-input-6').type("30")
-          cy.Nomeprojeto02(project)
-
-          
-          
-          /*cy.get('#mat-select-value-5 > .mat-select-placeholder').select('<span class="mat-option-text">4213-8/00: OBRAS DE URBANIZACAO  RUAS, PRACAS E CALCADAS</span>');
-
-       
-
-          cy.get('#mat-option-656 > span').click()   
-          cy.get('#mat-option-657 > span').click()   
-          cy.get('#mat-option-658 > span').click().type('{esc}');
-          cy.get('#mat-select-value-1 > .mat-select-placeholder').click()
-          cy.get('#mat-option-1 > span').click()
-          cy.get('#mat-option-2 > span').click()
-          cy.get('#mat-option-3 > span').click().type('{esc}');
-          cy.get('.mat-select-placeholder').click()
-          cy.get('#mat-option-22 > span').click()
-          cy.get('#mat-option-13 > span').click().type('{esc}');
-          cy.get('#mat-input-3').type('1')
-          cy.get('#mat-input-4').type('10000000')
-          cy.get('#mat-input-5').type("1")
-          cy.get('#mat-input-6').type("30")
-          cy.Nomeprojeto02(project)
-          */
+          cy.Nomeprojeto02(project)          
         })
       })
     

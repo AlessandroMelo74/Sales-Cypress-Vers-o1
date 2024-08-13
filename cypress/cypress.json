@@ -1,3 +1,5 @@
 {
-  "baseUrl": "https://lead-hunter-sales-frontend-dev.azurewebsites.net/" 
+  "baseUrl": "https://lead-hunter-sales-frontend-dev.azurewebsites.net/auth" 
 }
+
+
